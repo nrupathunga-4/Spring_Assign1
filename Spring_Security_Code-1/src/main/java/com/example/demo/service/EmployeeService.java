@@ -13,7 +13,8 @@ public interface EmployeeService {
 	
 	public Employee getEmployeeById(int id) throws EmployeeNotFound;
 	
-	public void deleteEmployee(int id) throws EmployeeNotFound;
+	public void deleteEmployee(int id);
 	
-	public Employee updatePassword(Employee employee,String email) throws EmployeeNotFound;
+	public Employee updatePassword(Employee employee,String email);
+	
 }

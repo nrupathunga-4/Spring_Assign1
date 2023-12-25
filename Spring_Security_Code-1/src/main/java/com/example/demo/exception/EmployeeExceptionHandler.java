@@ -23,6 +23,8 @@ public class EmployeeExceptionHandler {
 		ex.getBindingResult().getFieldErrors().forEach(error->{
 			errormap.put(error.getField(),error.getDefaultMessage());
 		});
+		errormap.put("status", "Failed");
+		errormap.put("statusCode", "400");
 		return errormap;
 	}	
 
@@ -38,6 +40,5 @@ public class EmployeeExceptionHandler {
 		Map<String, String> map=new HashMap<>();
 		map.put("error", msg.getMessage());
 		return map;
-		
 	}
 }
